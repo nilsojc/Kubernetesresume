@@ -66,7 +66,7 @@ If you want to see details of the cluster, you can run the command `eksctl get c
   <img src="https://i.imgur.com/kvT29S2.png" 
 </p>
 
-To check if the EC2 worker nodes are running you can use the command `kubectl get nodes`
+To check if the EC2 worker nodes are running you can use the command `kubectl get nodes` or by searching `Elastic Kubernetes Service` in the AWS Console.
 
 
  
