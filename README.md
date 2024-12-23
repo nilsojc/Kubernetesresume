@@ -67,13 +67,26 @@ If you want to see details of the cluster, you can run the command `eksctl get c
 </p>
 
 To check if the EC2 worker nodes are running you can use the command `kubectl get nodes` or by searching `Elastic Kubernetes Service` in the AWS Console.
-
-
- 
+ <p align="left">
+  <img src="https://i.imgur.com/9DS3QKD.png" 
+</p>
+ <p align="left">
+  <img src="https://i.imgur.com/gHv86lN.png" 
+</p>
+  <p align="left">
+  <img src="https://i.imgur.com/lJW3NRA.png" 
+</p>
 
  
    
 2. **Create a Dockerfile, Download Docker Desktop and build a docker image to Docker Hub**
 
+In this step, we will install Docker desktop along with the creation of a dockerfile to build a docker image to be deployed to Docker hub.
+ <p align="center">
+  <img src="https://i.imgur.com/K4LxElf.png" 
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/K4LxElf.png" 
+</p>
  
 
