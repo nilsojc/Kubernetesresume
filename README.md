@@ -56,7 +56,17 @@ For `kubectl` we will open a Powershell terminal and copy-paste this code: `curl
 
 Next, we will run the command `eksctl create cluster` in the CLI. Note that if we input the command as it is, it will create two M5 Large EC2 instances, which are **NOT** covered in the Free Tier. Therefore, we have to specify the type of instancce we will be deploying. Command will be sent as `eksctl create cluster --node-type t2.micro --nodes 2`. Process will take around 10 to 15 minutes as it will be deploying multiple services like `VPC` and Route tables.
 
+<p align="center">
+  <img src="https://i.imgur.com/v72uPKW.png" 
+</p>
 
+If you want to see details of the cluster, you can run the command `eksctl get cluster`
+ 
+ <p align="left">
+  <img src="https://i.imgur.com/kvT29S2.png" 
+</p>
+
+To check if the EC2 worker nodes are running you can use the command `kubectl get nodes`
 
 
  
