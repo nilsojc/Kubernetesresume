@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/udMqbcU.png" 
+  <img src="https://i.imgur.com/MDJUGvO.png" 
 </p>
   
 ##  Hosting a Resume from Kubernetes with docker using Amazon Elastic Kubernetes Services 
