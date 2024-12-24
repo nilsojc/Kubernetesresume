@@ -33,4 +33,4 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: httpd
+        image: nilsojc/custom-httpd
