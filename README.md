@@ -85,8 +85,13 @@ In this step, we will install Docker desktop along with the creation of a docker
  <p align="center">
   <img src="https://i.imgur.com/K4LxElf.png" 
 </p>
+
+   Next, we will input the command `docker build -t custom-httpd .` to start building a docker image. 
 <p align="center">
-  <img src="https://i.imgur.com/K4LxElf.png" 
+  <img src="https://i.imgur.com/knJDFRT.png" 
+</p>
+<p align="left">
+  <img src="https://i.imgur.com/LFp9H4X.png" 
 </p>
  
 
