@@ -19,16 +19,20 @@ We need to implement a custom image from `Docker Hub` so that the pods can recei
   - EKS (Elastic Kubernetes Services) 
   - Kubernetes
   - Docker
+  - DockerHub
   - HTML
   - CSS
   - JSON
+  - YAML
+  - Application Load Balancer
+  - Visual Studio Code
     
   
 
 <h2>Operating Systems Used</h2>
 
 - **Windows 11**
-- Linux (EC2)
+- Linux (EC2 worker node and container)
 
 <h2>How to Build</h2>
 
