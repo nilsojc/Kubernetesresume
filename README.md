@@ -79,7 +79,7 @@ To check if the EC2 worker nodes are running you can use the command `kubectl ge
 
  
    
-2. **Create a Dockerfile, Download Docker Desktop and build a docker image to Docker Hub**
+2. **Install Docker Desktop and build a docker image in order to be pushed in our Docker Hub repository.**
 
 In this step, we will install Docker desktop along with the creation of a dockerfile to build a docker image to be deployed to Docker hub.
  <p align="center">
@@ -93,5 +93,76 @@ In this step, we will install Docker desktop along with the creation of a docker
 <p align="left">
   <img src="https://i.imgur.com/LFp9H4X.png" 
 </p>
+
+ The docker image will show after inputting the command `docker images`:
+ <p align="left">
+  <img src="https://i.imgur.com/KctWiUf.png" 
+</p>
+
+Next up, we will input the command `docker run -d -p 8080:80 custom-httpd` so that we run our container image. 
+<p align="left">
+  <img src="https://i.imgur.com/Ykf05Bt.png" 
+</p>
+  
+You can find out if our container image is running locally by sending the command `docker ps`
+<p align="left">
+  <img src="https://i.imgur.com/uWLJDq4.png" 
+</p>
+
+The docker image will now run in `localhost:8080`, and we can test it by typing it in the address bar:
+
+<p align="center">
+  <img src="https://i.imgur.com/aBgpjOj.png" 
+</p>
+
+After this step, we will need to push this image to dockerhub. A repository was created in `hub.docker.com` with the name `custom-httpd` as shown below:
+<p align="left">
+  <img src="https://i.imgur.com/WvLdyQD.png" 
+</p>
+  
+However, in order for us to do that we will need to stop the repository with the command `docker stop 5fae504c790d`.
+<p align="left">
+  <img src="https://i.imgur.com/XrcF3Lq.png" 
+</p>
+  
+Input command `docker login --username=yourusername` so that we can sign our Dockerhub account and push our repository with command `docker push username/custom-httpd`
+
+Then, we use command `docker tag 99e4d0a28193 nilsojc/custom-httpd ` to tag this container image with the docker hub repository
+<p align="left">
+  <img src="https://i.imgur.com/OeuZMLz.png" 
+</p>
+
+  Then we proceed to push the image to our repository `nilsojc/custom-httpd`
+<p align="left">
+  <img src="https://i.imgur.com/Pnn7zUA.png" 
+</p>
+
+3. **Deploy Resume Container from DockerHub to Amazon EKS**
+NOTE:We will grab our `manifest file` which is the sample `.yaml Load Balancer file` in my repository. You can create an external load balancer for kubernetes with kubectl with an example command like `kubectl expose deployment example --port=8765 --target-port=9376 \
+        --name=example-service --type=LoadBalancer`. This command creates a new Service using the same selectors as the referenced resource (in the case of the example above, a Deployment named example). For more information on this part, you can visit the website https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+
+<p align="left">
+  <img src="https://i.imgur.com/TqRFOVN.png" 
+</p>
+  
+<p align="left">
+  <img src="" 
+</p>
+<p align="left">
+  <img src="https://i.imgur.com/XrcF3Lq.png" 
+</p>
+<p align="left">
+  <img src="https://i.imgur.com/XrcF3Lq.png" 
+</p>
+<p align="left">
+  <img src="https://i.imgur.com/XrcF3Lq.png" 
+</p>
+<p align="left">
+  <img src="https://i.imgur.com/XrcF3Lq.png" 
+</p>
+
+
+
+
  
 
